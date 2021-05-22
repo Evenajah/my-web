@@ -20,15 +20,6 @@ const Contact = () => {
             <Grid container style={{ textAlign: "center" }}>
               <Grid lg item className="wrap-edu">
                 <img
-                  src="https://image.flaticon.com/icons/png/512/2097/2097276.png"
-                  className="image-edu"
-                  alt="Primary"
-                  loading="lazy"
-                />
-                <h2>(+66) 838639511</h2>
-              </Grid>
-              <Grid lg item className="wrap-edu">
-                <img
                   src="https://image.flaticon.com/icons/png/512/3649/3649439.png"
                   alt="High School"
                   className="image-edu"
