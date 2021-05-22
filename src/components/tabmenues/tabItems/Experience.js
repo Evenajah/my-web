@@ -4,7 +4,7 @@ import Grid from "@material-ui/core/Grid";
 import React from "react";
 import AngularImage from "../../../assets/Images/angular.png";
 import SpringBootImage from "../../../assets/Images/spring.png";
-import DotnetImage from "../../../assets/Images/.net.png";
+import DotnetImage from "../../../assets/Images/dotnet.png";
 import CSharpImage from "../../../assets/Images/cSharp.png";
 
 const Experience = () => {

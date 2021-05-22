@@ -2,7 +2,7 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import Grid from "@material-ui/core/Grid";
 import React from "react";
-import DotnetImage from "../../../assets/Images/.net.png";
+import DotnetImage from "../../../assets/Images/dotnet.png";
 import Tooltip from "@material-ui/core/Tooltip";
 //image
 import AngularImage from "../../../assets/Images/angular.png";

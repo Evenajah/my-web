@@ -1,8 +1,7 @@
+import Fade from "@material-ui/core/Fade";
+import Grid from "@material-ui/core/Grid";
 import "./App.css";
 import CardResume from "./components/CardResume";
-import Grid from "@material-ui/core/Grid";
-import Fade from "@material-ui/core/Fade";
-import Grow from "@material-ui/core/Grow";
 function App() {
   return (
     <div className="App" style={{ margin: 20 }}>
