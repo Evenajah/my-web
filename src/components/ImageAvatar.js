@@ -1,6 +1,6 @@
 import Avatar from "@material-ui/core/Avatar";
 import React from "react";
-import ProfileImage from "../assets/Images/profile3.jpg";
+import ProfileImage from "../assets/Images/profile4.jpg";
 
 const ImageAvatar = () => {
   return (
