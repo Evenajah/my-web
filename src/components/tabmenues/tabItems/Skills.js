@@ -19,73 +19,41 @@ const Skills = () => {
   return (
     <Grid>
       <Card className="card-about">
-        <CardContent
-          style={{
-            textAlign: "left",
-            padding: "10px 45px 10px 45px",
-          }}
-        >
+        <CardContent>
           <h2 class="header-tab">Skills</h2>
-          <Grid container>
+          <Grid container justify="center">
             <Grid item lg>
               <Tooltip arrow title={<h1>React</h1>}>
-                <img
-                  alt="react"
-                  src={ReactImage}
-                  loading="lazy"
-                  className="image-skills"
-                />
+                <img alt="react" src={ReactImage} className="image-skills" />
               </Tooltip>
               <Tooltip arrow title={<h1>Angular</h1>}>
                 <img
                   alt="Angular"
                   className="image-skills"
                   src={AngularImage}
-                  loading="lazy"
                 />
               </Tooltip>
 
               <Tooltip arrow title={<h1>DotNet</h1>}>
-                <img
-                  alt="DotNet"
-                  src={DotnetImage}
-                  loading="lazy"
-                  className="image-skills"
-                />
+                <img alt="DotNet" src={DotnetImage} className="image-skills" />
               </Tooltip>
 
               <Tooltip arrow title={<h1>C#</h1>}>
-                <img
-                  alt="C#"
-                  src={CSharpImage}
-                  loading="lazy"
-                  className="image-skills"
-                />
+                <img alt="C#" src={CSharpImage} className="image-skills" />
               </Tooltip>
 
               <Tooltip arrow title={<h1>HTML</h1>}>
-                <img
-                  alt="HTML"
-                  src={HtmlImage}
-                  loading="lazy"
-                  className="image-skills"
-                />
+                <img alt="HTML" src={HtmlImage} className="image-skills" />
               </Tooltip>
 
               <Tooltip arrow title={<h1>CSS</h1>}>
-                <img
-                  alt="CSS"
-                  src={CssImage}
-                  loading="lazy"
-                  className="image-skills"
-                />
+                <img alt="CSS" src={CssImage} className="image-skills" />
               </Tooltip>
 
               <Tooltip arrow title={<h1>Javascript</h1>}>
                 <img
                   alt="Javascript"
                   src={JavascriptImage}
-                  loading="lazy"
                   className="image-skills"
                 />
               </Tooltip>
@@ -94,25 +62,18 @@ const Skills = () => {
                 <img
                   alt="Typescript"
                   src={TypescriptImage}
-                  loading="lazy"
                   className="image-skills"
                 />
               </Tooltip>
 
               <Tooltip arrow title={<h1>Github</h1>}>
-                <img
-                  alt="Github"
-                  src={GithubImage}
-                  loading="lazy"
-                  className="image-skills"
-                />
+                <img alt="Github" src={GithubImage} className="image-skills" />
               </Tooltip>
 
               <Tooltip arrow title={<h1>Firebase Realtime Database</h1>}>
                 <img
                   alt="Firebase Realtime Database"
                   src={FirebaseImage}
-                  loading="lazy"
                   className="image-skills"
                 />
               </Tooltip>

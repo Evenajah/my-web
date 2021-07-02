@@ -10,16 +10,22 @@ const CardResume = () => {
   const classes = useStyles();
   return (
     <Paper className={classes.paper}>
-      <Grid container className="header-grid" item style={{ padding: "2vw" }}>
-        <Header />
-
-        <Grid item lg={3} justify="flex-start" alignItems="center">
-          <IconSocialGroup />
+      <div className="header-grid">
+        <Grid container item className="content-wrap">
+          <Header />
+          <Grid item lg={3} alignItems="center">
+            <IconSocialGroup />
+          </Grid>
+          <Grid
+            item
+            lg={9}
+            className="wrap-tab"
+            style={{ margin: "-7vw 0px 0px 0px" }}
+          >
+            <TabMenues />
+          </Grid>
         </Grid>
-        <Grid item lg={9} style={{ margin: "-7vw 0px 0px 0px" }}>
-          <TabMenues />
-        </Grid>
-      </Grid>
+      </div>
     </Paper>
   );
 };

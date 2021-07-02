@@ -10,13 +10,11 @@ import SchoolIcon from "@material-ui/icons/School";
 import WorkIcon from "@material-ui/icons/Work";
 import PropTypes from "prop-types";
 import React from "react";
-import SwipeableViews from "react-swipeable-views";
 import AboutMe from "./tabItems/AboutMe";
 import Contact from "./tabItems/Contact";
 import Education from "./tabItems/Education";
 import Experience from "./tabItems/Experience";
 import Skills from "./tabItems/Skills";
-
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -24,8 +22,8 @@ function TabPanel(props) {
     <div
       role="tabpanel"
       hidden={value !== index}
-      id={`full-width-tabpanel-${index}`}
-      aria-labelledby={`full-width-tab-${index}`}
+      id={`scrollable-force-tabpanel-${index}`}
+      aria-labelledby={`scrollable-force-tab-${index}`}
       {...other}
     >
       {value === index && (
@@ -43,6 +41,13 @@ TabPanel.propTypes = {
   value: PropTypes.any.isRequired,
 };
 
+function a11yProps(index) {
+  return {
+    id: `scrollable-force-tab-${index}`,
+    "aria-controls": `scrollable-force-tabpanel-${index}`,
+  };
+}
+
 const TabMenues = () => {
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
@@ -51,57 +56,59 @@ const TabMenues = () => {
     setValue(newValue);
   };
 
-  const handleChangeIndex = (index) => {
-    setValue(index);
-  };
-
   return (
-    <>
+    <div className="tab-section">
       <Tabs
         value={value}
         onChange={handleChange}
         indicatorColor="primary"
         textColor="primary"
-        variant="fullWidth"
-        aria-label="full width tabs example"
+        variant="scrollable"
+        scrollButtons="on"
       >
         <Tab
           icon={<AccountCircleIcon style={{ fontSize: "4vh" }} />}
           label="About Me"
+          {...a11yProps(0)}
         />
         <Tab
           icon={<SchoolIcon style={{ fontSize: "4vh" }} />}
           label="Education"
+          {...a11yProps(1)}
         />
         <Tab
           icon={<WorkIcon style={{ fontSize: "4vh" }} />}
           label="Experience"
+          {...a11yProps(2)}
         />
-        <Tab icon={<CodeIcon style={{ fontSize: "4vh" }} />} label="Skill" />
-        <Tab icon={<EmailIcon style={{ fontSize: "4vh" }} />} label="Contact" />
+        <Tab
+          icon={<CodeIcon style={{ fontSize: "4vh" }} />}
+          label="Skill"
+          {...a11yProps(3)}
+        />
+        <Tab
+          icon={<EmailIcon style={{ fontSize: "4vh" }} />}
+          label="Contact"
+          {...a11yProps(4)}
+        />
       </Tabs>
-      <SwipeableViews
-        axis={theme.direction === "rtl" ? "x-reverse" : "x"}
-        index={value}
-        onChangeIndex={handleChangeIndex}
-      >
-        <TabPanel value={value} index={0} dir={theme.direction}>
-          <AboutMe />
-        </TabPanel>
-        <TabPanel value={value} index={1} dir={theme.direction}>
-          <Education />
-        </TabPanel>
-        <TabPanel value={value} index={2} dir={theme.direction}>
-          <Experience />
-        </TabPanel>
-        <TabPanel value={value} index={3} dir={theme.direction}>
-          <Skills />
-        </TabPanel>
-        <TabPanel value={value} index={4} dir={theme.direction}>
-          <Contact />
-        </TabPanel>
-      </SwipeableViews>
-    </>
+
+      <TabPanel value={value} index={0} dir={theme.direction}>
+        <AboutMe />
+      </TabPanel>
+      <TabPanel value={value} index={1} dir={theme.direction}>
+        <Education />
+      </TabPanel>
+      <TabPanel value={value} index={2} dir={theme.direction}>
+        <Experience />
+      </TabPanel>
+      <TabPanel value={value} index={3} dir={theme.direction}>
+        <Skills />
+      </TabPanel>
+      <TabPanel value={value} index={4} dir={theme.direction}>
+        <Contact />
+      </TabPanel>
+    </div>
   );
 };
 

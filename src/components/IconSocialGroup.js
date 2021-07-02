@@ -36,7 +36,6 @@ const IconSocialGroup = () => {
           <span className="text-social-icon">LinkedIn</span>
         </p>
       </Link>
-
       <Link
         href="https://www.facebook.com/EveInwza007/"
         target="_blank"
@@ -50,7 +49,6 @@ const IconSocialGroup = () => {
           <span className="text-social-icon">Facebook</span>
         </p>
       </Link>
-
       <Link
         href="https://twitter.com/Boblennon41"
         target="_blank"
@@ -64,7 +62,6 @@ const IconSocialGroup = () => {
           <span className="text-social-icon">Twitter</span>
         </p>
       </Link>
-
       <Link
         href="https://www.instagram.com/thrdlbm/"
         target="_blank"

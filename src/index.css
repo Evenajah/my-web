@@ -1,7 +1,6 @@
 body {
   margin: 0;
-  font-family: "Kanit", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
-    "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Kanit", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   background-image: url("https://images.pexels.com/photos/4210037/pexels-photo-4210037.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
   background-attachment: fixed;
@@ -9,13 +8,35 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
+
+.header-text {
+  font-size: 3.5vw;
+  text-align: left;
+  color: whitesmoke;
+}
+
+.detail-text {
+  font-size: 1.3vw;
+  text-align: left;
+  color: whitesmoke;
+}
+
 .header-grid {
   background-color: #900;
   height: 12vw;
 }
+
+.content-wrap {
+  padding: 1.5vw;
+}
+
+.MuiCardContent-root:last-child {
+  max-height: 800px;
+  overflow: auto;
+}
+
 .icon-button-style {
   color: #900;
   padding: 5px;
@@ -28,12 +49,15 @@ code {
   width: 50px;
   transition: 0.3s;
 }
+
 .PrivateTabIndicator-colorPrimary-6 {
   background-color: #900 !important;
 }
+
 .MuiTab-textColorPrimary.Mui-selected {
   color: #900 !important;
 }
+
 .header-tab {
   background-color: indianred;
   width: 200px;
@@ -42,26 +66,130 @@ code {
   border-radius: 60px 25px 150px 50px;
 }
 
+.tab-section {
+  width: 70vw;
+  align-items: center;
+}
+
+/*mobile*/
+
+@media (max-width: 480px) {
+  .card-about {
+    background-color: #ffe4e1 !important;
+    text-align: left;
+    font-size: 14px;
+  }
+  .card-about img {
+    text-align: left;
+    font-size: 14px;
+  }
+  .image-edu {
+    width: 100px !important;
+    height: 100px;
+  }
+  h2 {
+    font-size: 15px;
+  }
+  .image-skills {
+    text-align: center !important;
+    background-color: white;
+    margin: 10px !important;
+    width: 15vw !important;
+    height: 15vw !important;
+    transition: 0.2s;
+    height: 6vw;
+    padding: 15px;
+    border-radius: 35px;
+  }
+  .tab-section {
+    width: 86vw !important;
+    padding: 0;
+  }
+  .MuiCardContent-root:last-child {
+    max-height: 600px;
+    overflow: scroll;
+  }
+  .detail-text {
+    font-size: 8vw;
+  }
+  .header-text {
+    font-size: 5vw;
+  }
+}
+
+/*ipad*/
+
+@media (max-width: 1024px) {
+  .tab-section {
+    width: 92vw;
+    padding: 0;
+  }
+  .detail-text {
+    font-size: 2vw;
+  }
+  .header-tab {
+    background-color: indianred;
+    width: 100px;
+    padding: 15px;
+    font-size: 20px;
+    color: white;
+    border-radius: 60px 25px 150px 50px;
+  }
+  .link-social {
+    display: none;
+  }
+  .wrap-tab {
+    margin: 0 !important;
+    padding: 0px;
+  }
+  .menu-button {
+    display: block !important;
+  }
+  .header-grid {
+    background-color: #900;
+    height: 20vw;
+  }
+  .avatar {
+    border: 5px solid #900 !important;
+  }
+}
+
+.menu-button {
+  text-align: right;
+}
+
 .card-about {
   background-color: #ffe4e1 !important;
   min-height: 500px;
+  text-align: left;
 }
+
+.wrap-tab {
+  padding: 0px;
+}
+
 .image-edu {
   width: 20vh;
   margin: 15px;
 }
 
+.MuiCardContent-root {
+  padding: 10px !important;
+}
+
 .wrap-edu {
   background-color: white;
-  margin: 10px 10px 40px 10px !important;
+  margin: 10px !important;
   padding: 30px;
   border-radius: 50px;
 }
+
 .wrap-edu:hover {
   transform: scale(1.05);
   transition: 0.2s;
   cursor: pointer;
 }
+
 .wrap-edu {
   transition: 0.2s;
 }
@@ -91,6 +219,7 @@ code {
   border-radius: 50px 10px 50px 10px;
   text-align: left;
 }
+
 .social-button:hover {
   transform: scale(1.05);
   cursor: pointer;
@@ -119,13 +248,15 @@ code {
 .button-header {
   min-height: 60px !important;
   color: white !important;
-  transition: 0.2s !important ;
+  transition: 0.2s !important;
   min-width: 200px !important;
 }
+
 .button-header:hover {
   transform: scale(1.08);
   transition: 0.2s;
 }
+
 .resume-button {
   background-color: indianred !important;
 }

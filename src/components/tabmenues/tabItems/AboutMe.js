@@ -7,12 +7,7 @@ const AboutMe = () => {
   return (
     <Grid>
       <Card className="card-about">
-        <CardContent
-          style={{
-            textAlign: "left",
-            padding: "10px 45px 10px 45px",
-          }}
-        >
+        <CardContent>
           <div>
             <h2 class="header-tab">About Me</h2>
             <h3>• Name : Tharadol Boonma</h3>
